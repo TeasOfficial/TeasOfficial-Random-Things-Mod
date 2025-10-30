@@ -12,7 +12,7 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.Unbreakable;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.common.SimpleTier;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -26,11 +26,13 @@ public class ModRegistry {
 
     public static final TagKey<Block> VAJRA_TOOLTAG = BlockTags.create(ResourceLocation.withDefaultNamespace("mineable/pickaxe"));
 
+
+
     public static final DeferredHolder<Item, DiggerItem> VAJRA_ITEM = ITEMS.register(
             "vajra",
             () ->
                 new VajraItem(
-                        Tiers.NETHERITE,
+                        new SimpleTier(BlockTags.INCORRECT_FOR_NETHERITE_TOOL,0, 0.0F, 5.0F, 0, () -> null),
                         VAJRA_TOOLTAG,
                         new Item.Properties()
                                 .rarity(Rarity.EPIC)

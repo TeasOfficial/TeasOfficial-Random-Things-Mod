@@ -9,7 +9,6 @@ import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -25,10 +24,5 @@ public class ItemsTag extends ItemTagsProvider {
         tag(ItemTags.AXES).add(ModRegistry.VAJRA_ITEM.get());
         tag(ItemTags.PICKAXES).add(ModRegistry.VAJRA_ITEM.get());
         tag(ItemTags.SWORDS).add(ModRegistry.VAJRA_ITEM.get());
-        tag(ItemTags.SHARP_WEAPON_ENCHANTABLE).add(ModRegistry.VAJRA_ITEM.get());
-        tag(ItemTags.WEAPON_ENCHANTABLE).add(ModRegistry.VAJRA_ITEM.get());
-        tag(ItemTags.FIRE_ASPECT_ENCHANTABLE).add(ModRegistry.VAJRA_ITEM.get());
-        tag(ItemTags.MINING_ENCHANTABLE).add(ModRegistry.VAJRA_ITEM.get());
-        tag(ItemTags.MINING_LOOT_ENCHANTABLE).add(ModRegistry.VAJRA_ITEM.get());
     }
 }

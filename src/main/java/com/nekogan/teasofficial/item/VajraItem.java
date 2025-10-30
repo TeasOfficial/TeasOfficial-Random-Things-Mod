@@ -25,10 +25,7 @@ import net.neoforged.neoforge.common.ItemAbility;
 import org.jetbrains.annotations.NotNull;
 
 import java.lang.reflect.Field;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 public class VajraItem extends DiggerItem {
     private static final Map<Block, BlockState> FLATTENABLES = new HashMap<>();
