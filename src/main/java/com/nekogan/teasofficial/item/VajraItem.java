@@ -150,8 +150,10 @@ public class VajraItem extends DiggerItem {
     @Override
     public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
         tooltip.add(Component.translatable("tooltip.teasofficial.vajra.1"));
+        tooltip.add(Component.translatable("tooltip.teasofficial.multitools"));
         tooltip.add(Component.translatable(""));
         tooltip.add(Component.translatable("tooltip.teasofficial.vajra.2"));
+        tooltip.add(Component.translatable("tooltip.teasofficial.vajra.3"));
         tooltip.add(Component.translatable("tooltip.teasofficial.unbreakable"));
     }
 

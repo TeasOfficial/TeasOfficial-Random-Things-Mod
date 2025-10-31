@@ -4,5 +4,7 @@
 
   "item.teasofficial.vajra": "Vajra",
   "tooltip.teasofficial.vajra.1": "§6Why GregTech here?!",
-  "tooltip.teasofficial.vajra.2": "§fThe tool breaks all blocks at the same speed."
+  "tooltip.teasofficial.vajra.2": "§fThe tool breaks all blocks at the same speed.",
+  "tooltip.teasofficial.vajra.3": "§6Used as：§fPickaxe、Axe、Shovel、Wrench.",
+  "tooltip.teasofficial.multitools": "§7§uThis is a Multi Tool."
 }
