@@ -6,5 +6,8 @@
   "tooltip.teasofficial.vajra.1": "§6为什么格雷的东西会出现在这里？！",
   "tooltip.teasofficial.vajra.2": "§f该工具对所有方块破坏速度均相等。",
   "tooltip.teasofficial.vajra.3": "§6可以作为：§f镐、斧、锹、扳手。",
-  "tooltip.teasofficial.multitools": "§7§u这是一个多用途工具"
+  "tooltip.teasofficial.multitools": "§7§u这是一个多用途工具",
+
+  "item.teasofficial.horn_o_plenty": "丰饶之角",
+  "tooltip.teasofficial.horn_o_plenty.1": "§7§o它装了无穷的庆祝水果作为礼物。"
 }

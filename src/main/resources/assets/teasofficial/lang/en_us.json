@@ -6,5 +6,8 @@
   "tooltip.teasofficial.vajra.1": "§6Why GregTech here?!",
   "tooltip.teasofficial.vajra.2": "§fThe tool breaks all blocks at the same speed.",
   "tooltip.teasofficial.vajra.3": "§6Used as：§fPickaxe、Axe、Shovel、Wrench.",
-  "tooltip.teasofficial.multitools": "§7§uThis is a Multi Tool."
+  "tooltip.teasofficial.multitools": "§7§uThis is a Multi Tool.",
+
+  "item.teasofficial.horn_o_plenty": "Horn o' plenty",
+  "tooltip.teasofficial.horn_o_plenty.1": "§7§oIt is filled with the inexhaustible gifts of celebratory fruits."
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "teasofficial:item/foods/horn_o_plenty"
+  }
+}
