@@ -4,6 +4,10 @@ A Minecraft Mod for my own server.
 
 Add something here, maybe comfrom another mod.
 
+This mod is merely a product of the author's learning process and may have bugs or performance issues. It will not be released on other platforms until its content is more complete.
+
+*本mod只是作者学习过程中的产物，可能会有BUG或性能上的问题，在内容丰富之前不考虑往其他平台发布*
+
 ---
 
 # !!! Alert !!!
