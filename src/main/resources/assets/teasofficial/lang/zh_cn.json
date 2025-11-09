@@ -9,5 +9,8 @@
   "tooltip.teasofficial.multitools": "§7§u这是一个多用途工具",
 
   "item.teasofficial.horn_o_plenty": "丰饶之角",
-  "tooltip.teasofficial.horn_o_plenty.1": "§7§o它装了无穷的庆祝水果作为礼物。"
+  "tooltip.teasofficial.horn_o_plenty.1": "§7§o它装了无穷的庆祝水果作为礼物。",
+
+  "tooltip.teasofficial.horn_o_plenty.confluence.1": "§e§l汇流来世 §f联动：",
+  "tooltip.teasofficial.horn_o_plenty.confluence.2": "§f食用后恢复 20 血量，获得 1 分钟 耐药性。"
 }

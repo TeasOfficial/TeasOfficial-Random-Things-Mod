@@ -9,5 +9,8 @@
   "tooltip.teasofficial.multitools": "§7§uThis is a Multi Tool.",
 
   "item.teasofficial.horn_o_plenty": "Horn o' plenty",
-  "tooltip.teasofficial.horn_o_plenty.1": "§7§oIt is filled with the inexhaustible gifts of celebratory fruits."
+  "tooltip.teasofficial.horn_o_plenty.1": "§7§oIt is filled with the inexhaustible gifts of celebratory fruits.",
+
+  "tooltip.teasofficial.horn_o_plenty.confluence.1": "§e§lConfluence §fOtherworld",
+  "tooltip.teasofficial.horn_o_plenty.confluence.2": "§fRestores 20 health when consumed and grants 1 minute of Potion Sickness."
 }

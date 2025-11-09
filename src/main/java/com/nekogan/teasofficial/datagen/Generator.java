@@ -4,16 +4,10 @@ import com.nekogan.teasofficial.Main;
 import com.nekogan.teasofficial.datagen.recipes.VajraRepices;
 import com.nekogan.teasofficial.datagen.server.BlocksTag;
 import com.nekogan.teasofficial.datagen.server.ItemsTag;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.DataProvider;
-import net.minecraft.data.PackOutput;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
-
-import java.util.concurrent.CompletableFuture;
-import java.util.function.BiFunction;
 
 @EventBusSubscriber(modid = Main.MODID)
 public class Generator{
@@ -40,5 +34,7 @@ public class Generator{
                         packOutput,
                         registries
                 ));
+
+
     }
 }

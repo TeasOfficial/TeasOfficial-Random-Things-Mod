@@ -9,16 +9,23 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.Unbreakable;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.common.SimpleTier;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+
+import org.confluence.mod.common.init.ModEffects;
+import org.confluence.mod.common.effect.harmful.PotionSicknessEffect;
 
 import java.util.List;
 
@@ -59,6 +66,14 @@ public class ModRegistry {
                 @Override
                 public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
                     tooltip.add(Component.translatable("tooltip.teasofficial.horn_o_plenty.1"));
+
+                    if(ModList.get().isLoaded("confluence")) {
+                        tooltip.add(Component.translatable("  "));
+
+                        tooltip.add(Component.translatable("tooltip.teasofficial.horn_o_plenty.confluence.1"));
+                        tooltip.add(Component.translatable("tooltip.teasofficial.horn_o_plenty.confluence.2"));
+
+                    }
                 }
 
                 // 使用后不消耗物品
@@ -68,6 +83,29 @@ public class ModRegistry {
                         entity.eat(world, stack.copy());
                     }
                     return stack;
+                }
+
+                @Override
+                public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
+                    ItemStack itemStack = pPlayer.getMainHandItem();
+                    if(!ModList.get().isLoaded("confluence")) {
+                        pPlayer.startUsingItem(pUsedHand);
+                        return InteractionResultHolder.consume(itemStack);
+                    }
+
+                    if(pPlayer.hasEffect(ModEffects.POTION_SICKNESS)) {
+                        return InteractionResultHolder.fail(itemStack);
+                    }
+                    if(itemStack.is(HORN_O_PLENTY)) {
+                        // 给予耐药性逻辑
+                        pPlayer.heal(20.0F);
+                        pPlayer.getFoodData().eat(FoodsSheep.HORN_O_PLENTY);
+                        PotionSicknessEffect.addTo(pPlayer, 1200);
+                        pPlayer.swing(pUsedHand, true);
+                        return InteractionResultHolder.consume(itemStack);
+                    }else{
+                        return InteractionResultHolder.fail(itemStack);
+                    }
                 }
             }
     );
